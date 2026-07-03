@@ -1,0 +1,219 @@
+.app-desktop {
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(circle at 30% 20%, #6a6a6a, #2c2c2c 75%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-window {
+  width: min(1200px, 96vw);
+  height: min(760px, 94vh);
+  display: flex;
+  flex-direction: column;
+  background: var(--panel-bg);
+  border: 1px solid var(--window-border);
+  box-shadow: 4px 6px 24px rgba(0,0,0,0.55);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.app-window-titlebar-text small {
+  font-weight: normal;
+  opacity: 0.85;
+}
+
+/* ---- content strip: "SISTEMA DE ACTIVOS FIJOS" ---- */
+.app-content-label {
+  background: #f7f9fc;
+  border-bottom: 1px solid #b9cbe0;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--text-navy);
+  flex-shrink: 0;
+}
+
+/* ---- banner ---- */
+.app-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 96px;
+  padding: 0 22px;
+  background: linear-gradient(
+    to right,
+    var(--banner-dark) 0%,
+    var(--banner-mid) 55%,
+    var(--banner-light) 100%
+  );
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.app-banner-stripe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.app-banner-stripe span {
+  flex: 1;
+  display: block;
+}
+
+.app-banner-logo {
+  margin-left: 26px;
+  color: #fff;
+}
+.app-banner-title {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-shadow: 1px 2px 3px rgba(0,0,0,0.5);
+  font-style: italic;
+}
+.app-banner-subtitle {
+  font-size: 14px;
+  font-style: italic;
+  opacity: 0.95;
+  margin-top: -4px;
+}
+
+.app-banner-user {
+  color: #fff;
+  font-size: 12px;
+  text-align: right;
+  line-height: 1.6;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+/* ---- body: sidebar + content ---- */
+.app-body {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.app-sidebar {
+  width: 210px;
+  background: var(--panel-bg);
+  border-right: 1px solid #c3d3e6;
+  padding: 14px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+  overflow-y: auto;
+}
+
+.app-sidebar-title {
+  font-weight: bold;
+  color: var(--text-navy);
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.sidebar-btn {
+  text-align: center;
+  padding: 8px 6px;
+  font-size: 12px;
+}
+
+.sidebar-btn-active {
+  background: var(--btn-face-active) !important;
+  box-shadow: inset 1px 1px 3px rgba(0,0,0,0.3) !important;
+  font-weight: bold;
+}
+
+.app-content {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #dceaf7, #9dbfdc);
+}
+
+.app-content-header {
+  display: flex;
+  gap: 30px;
+  padding: 10px 20px;
+  font-size: 13px;
+  color: var(--text-label);
+  background: #fff;
+}
+
+.app-content-header b {
+  color: #0a2a52;
+}
+
+.fountain-scene {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fountain-watermark {
+  position: absolute;
+  bottom: 24px;
+  right: 40px;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: bold;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 1px;
+}
+
+/* ---- status bar ---- */
+.app-statusbar {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  height: 24px;
+  padding: 0 10px;
+  background: var(--statusbar-bg);
+  border-top: 1px solid #b9cbe0;
+  font-size: 11px;
+  color: var(--text-navy);
+  flex-shrink: 0;
+}
+
+/* ---- dropdown ---- */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #8ba3bd;
+  box-shadow: 2px 3px 8px rgba(0,0,0,0.3);
+  min-width: 170px;
+  z-index: 500;
+  font-size: 12px;
+  padding: 3px 0;
+}
+.dropdown-menu div {
+  padding: 5px 14px;
+  color: var(--text-navy);
+  cursor: pointer;
+  white-space: nowrap;
+}
+.dropdown-menu div:hover {
+  background: var(--btn-face-active);
+}
+.dropdown-sep {
+  height: 1px;
+  background: #d6dfe8;
+  margin: 3px 0;
+  cursor: default !important;
+}
+.dropdown-sep:hover {
+  background: #d6dfe8 !important;
+}
