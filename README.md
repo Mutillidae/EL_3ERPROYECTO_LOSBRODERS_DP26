@@ -1,8 +1,4 @@
-# VSIAF Frontend (réplica visual)
-
-Réplica de la interfaz del "Sistema de Activos Fijos - VSIAF" hecha con **Vite + React**.
-Es **solo frontend**: no hay base de datos ni backend; los datos se guardan en memoria
-(estado de React) mientras la página está abierta, y se pierden al recargar.
+VSIAF REACT + VITE
 
 ## Cómo correrlo
 
